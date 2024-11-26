@@ -1,0 +1,15 @@
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.AssemblyInfoInputs.cache
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.AssemblyInfo.cs
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.sourcelink.json
+C:\Users\lukas\Documents\GitHub\du04\bin\Debug\net8.0\du04.exe
+C:\Users\lukas\Documents\GitHub\du04\bin\Debug\net8.0\du04.deps.json
+C:\Users\lukas\Documents\GitHub\du04\bin\Debug\net8.0\du04.runtimeconfig.json
+C:\Users\lukas\Documents\GitHub\du04\bin\Debug\net8.0\du04.dll
+C:\Users\lukas\Documents\GitHub\du04\bin\Debug\net8.0\du04.pdb
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.dll
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\refint\du04.dll
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.pdb
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\du04.genruntimeconfig.cache
+C:\Users\lukas\Documents\GitHub\du04\obj\Debug\net8.0\ref\du04.dll
