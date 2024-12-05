@@ -25,7 +25,7 @@ namespace pb006
             foreach (int moveIdx in moves){
                 sentence += moveNames[moveIdx] + ", ";
             }
-            return this.GetType().Name + " " + sentence[..^2] + "]";
+            return this.GetType().Name + " " + sentence.Remove(sentence.Length - 2) + "]";
         }
     }
 
@@ -67,11 +67,25 @@ namespace pb006
         public HistoryBasedStrategy(int[] moves) : base(moves)
         {
         }
+        public abstract int GetMoveFromHistory();
+        public sealed override int GetMove(int? move, Outcome? result)
+        {
+            if (move != null && result != null){
+                theirMoves.Add(move.Value);
+                conclusions.Add(result.Value);
+            }
+
+            int curentMove = GetMoveFromHistory();
+
+            myMoves.Add(curentMove);
+            return curentMove;
+        }
 
         public new bool? IsHistoryBased()
         {
             return true;
         }
+        
 
         public string GetHistory(){
             string sentence = "";
@@ -92,16 +106,10 @@ namespace pb006
             this.delay = delay;
         }
 
-        public override int GetMove(int? move, Outcome? result){
-            if (move != null && result != null){
-                theirMoves.Add(move.Value);
-                conclusions.Add(result.Value);
-            }
+        public override int GetMoveFromHistory(){
 
-            int curentMove = theirMoves.Count < delay ? moves[myMoves.Count] : theirMoves[theirMoves.Count - delay];
+            return theirMoves.Count < delay ? moves[myMoves.Count] : theirMoves[theirMoves.Count - delay];
 
-            myMoves.Add(curentMove);
-            return curentMove;
         }
 
         public override string GetName(string[] moveNames){
@@ -116,11 +124,7 @@ namespace pb006
         {
         }
 
-        public override int GetMove(int? move, Outcome? result){
-            if (move != null && result != null){
-                theirMoves.Add(move.Value);
-                conclusions.Add(result.Value);
-            }
+        public override int GetMoveFromHistory(){
 
             int? curentMove = null;
 
@@ -131,10 +135,9 @@ namespace pb006
                 }
             }
             if (curentMove == null){
-                curentMove = moves[myMoves.Count];
+                curentMove = moves[myMoves.Count % moves.Length];
             }
 
-            myMoves.Add(curentMove.Value);
             return curentMove.Value;
         }
 
